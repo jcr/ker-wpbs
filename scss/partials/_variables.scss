@@ -1,0 +1,64 @@
+/**
+ * Ageris SCSS Variables
+ */
+
+$black:         #333333;
+$white:         #FFFFFF;
+
+$blue:          #02267C;
+$gray:          #2D2C27;
+$orange:        #FDA21E;
+
+$blue-darker:   darken($blue, 13%);
+$blue-dark:     darken($blue, 6.5%);
+$blue-light:    lighten($blue, 52.5%);
+$blue-lighter:  lighten($blue, 65%);
+
+$gray-light:    lighten($gray, 42%);
+$gray-lighter:  lighten($gray, 66%);
+
+$orange-darker: darken($orange, 13%);
+$orange-light:  lighten($orange, 6.5%);
+$orange-light:  lighten($orange, 25%);
+
+$footer-height: 90px;
+
+
+/**
+ * Integration with Bootstrap
+ */
+$brand-primary:         $blue;
+$brand-secondary:       $orange;
+$link-color:            $blue;
+$text-color:            $black;
+$headings-color:        $blue;
+
+$screen-sm: 782px;
+
+$grid-gutter-width: 60px;
+
+$state-success-bg:      rgba(#DFF0D8, .9);
+$state-info-bg:         rgba($blue-lighter, .9);
+$state-warning-bg:      rgba($orange-light, .9);
+$state-danger-bg:       rgba(#F2DEDE, .9);
+
+$btn-primary-bg:        $brand-primary;
+$btn-primary-border:    darken($brand-primary, 6.5%);
+
+$input-group-addon-bg: $white;
+
+// Menus & dropdown
+$navbar-default-bg:     $blue-dark;
+$navbar-default-color:  $white;
+// $navbar-default-border: $orange;
+$dropdown-bg:           $navbar-default-bg;
+$dropdown-link-color:   $white;
+
+$navbar-default-link-color:             $white;
+$navbar-default-link-hover-color:       darken($white, 6.5%);
+$navbar-default-link-active-color:      $brand-secondary;
+$navbar-border-radius: 0;
+// $navbar-height: 40px;
+
+//$jumbotron-bg:  lighten($blue, 85%);
+//$jumbotron-heading-color: $brand-primary;

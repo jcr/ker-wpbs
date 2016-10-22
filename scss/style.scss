@@ -1,0 +1,45 @@
+/*! SCSS Stylesheet | style.scss
+ * includes: Compass & Bootstrap frameworks
+ * Licence: WTFPL
+ * Author: Jules Clement <jules@ker.bz>
+ */
+
+// Site variables (configure colors, size, fonts, etc...)
+@import "partials/variables";
+
+//## Vendor stuff (Compass, Boostrap, etc...)
+@import "compass";
+//@import "compass/css3/border-radius";
+//@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+@import "bootstrap-compass";
+@import "bootstrap";
+//@import "bootstrap/carousel";
+//@import "bootstrap/glyphicons";
+//@import "bootstrap/navbar";
+//@import "bootstrap-select";
+
+// Modules / elements used in the project
+@import "modules/header";
+@import "modules/footer";
+@import "modules/menus";
+@import "modules/sidebars";
+@import "modules/posts";
+@import "modules/pages";
+
+//
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    @media screen {
+        margin-bottom: $footer-height + ($grid-gutter-width / 2);
+        &.admin-bar>header {
+            padding-top: 32px;
+            @media (max-width: $screen-sm) {
+                padding-top: 46px;
+            }
+        }
+    }
+}

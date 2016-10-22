@@ -1,0 +1,19 @@
+/*
+ Theme Name: Ker WP BootStrap
+ Theme URI: http://blog.ker.bz/wp/ker-wpbs
+ Description: Just another Wordpress theme based on Bootstrap. You can use me as a simple boilerplate code to implement a WP theme from scratch.
+ Author: Jules Clement
+ Author URI: http://jcpc.ker.bz/
+ Version: 1.0
+ Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support, boostrap
+ License: WTFPL
+ License URI: http://sam.zoy.org/wtfpl/
+*/
+
+/*
+Theme Check (http://wordpress.org/plugins/theme-check/)
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

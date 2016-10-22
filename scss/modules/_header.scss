@@ -1,0 +1,21 @@
+body>header {
+    @extend .row;
+    margin-bottom: ($grid-gutter-width / 2);
+    background-color: $blue-dark;
+    border-bottom: 2px solid $gray;
+    &, a, a:hover { color: $white; }
+    p {
+        @extend .col-sm-6;
+        @extend .col-md-3;
+        @media (min-width: $screen-sm) {
+            padding-top: 2.7em;
+        }
+    }
+    h1 {
+        @extend .col-sm-3;
+    }
+    .menu {
+        @extend .col-sm-6;
+        //@extend .col-md-4;
+    }
+}
