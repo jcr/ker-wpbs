@@ -17,3 +17,8 @@ body>footer {
         height: ($footer-height);
     }
 }
+
+footer {
+    font-size: .9em;
+    color: lighten($gray, 30%);
+}

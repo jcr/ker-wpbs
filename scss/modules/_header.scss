@@ -1,21 +1,33 @@
 body>header {
     @extend .row;
-    margin-bottom: ($grid-gutter-width / 2);
+    //margin-bottom: ($grid-gutter-width / 2);
     background-color: $blue-dark;
     border-bottom: 2px solid $gray;
     &, a, a:hover { color: $white; }
+    h1 {
+        @extend .col-sm-4;
+        @extend .col-md-3;
+        font-family: ConcertOne, cursive;
+    }
     p {
-        @extend .col-sm-6;
+        font-family: ConcertOne, cursive;
+        @extend .col-sm-8;
         @extend .col-md-3;
         @media (min-width: $screen-sm) {
             padding-top: 2.7em;
         }
     }
-    h1 {
-        @extend .col-sm-3;
-    }
     .menu {
         @extend .col-sm-6;
         //@extend .col-md-4;
+    }
+}
+
+header {
+    h1, h2, h3 {
+        font-family: ConcertOne, cursive;
+    }
+    a:hover {
+        text-decoration: none;
     }
 }

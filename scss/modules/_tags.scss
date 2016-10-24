@@ -1,0 +1,17 @@
+.wp-tags {
+    @extend .label;
+    @extend .label-primary;
+}
+
+.post-categories { padding-left: 0; }
+.post-categories li,
+.cat-item {
+    display: inline;
+    a {
+        @extend .wp-tags;
+    }
+}
+.tagcloud {
+    text-align: justify;
+    line-height: 1.2em;
+}

@@ -1,7 +1,11 @@
-aside>div.list-group,
-aside>div {
+aside>div.list-group {
     @include box-shadow(5px 5px 7px 1px rgba($gray, .5));
     padding: 1em;
     background-color: rgba($white, .8);
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &>ul {
+        @extend .list-unstyled;
+    }
 }
-

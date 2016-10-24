@@ -1,3 +1,20 @@
+.navbar {
+    border: 0;
+}
+
+header.navbar {
+    margin-top: 0px;
+}
+
 footer .navbar {
     margin-bottom: 0px;
+}
+
+/* Pager */    
+ul.page-numbers {
+    @extend .pagination;
+    margin-bottom: 0;
+    .current {
+        @extend .bg-primary;
+    }
 }

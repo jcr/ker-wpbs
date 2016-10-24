@@ -1,0 +1,47 @@
+// WP Common elements
+
+table {
+    @extend .table;
+}
+
+footer {
+    a {
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+article.post,
+article.page {
+    @include box-shadow(5px 5px 7px 1px rgba($gray, .5));
+    background-color: rgba($white, .8); /* shouldn't be there MOVE */
+
+    margin-bottom: $grid-gutter-width / 4;
+    &:last-of-type { margin-bottom: 0; }
+    /* &>header, */
+    /* &>section, */
+    /* &>footer, */
+    /* &>aside { */
+    /*     //@extend .clearfix; */
+    /* } */
+    footer {
+        border-top: 1px dotted lighten($gray, 30%);
+    }
+}
+
+
+
+.link .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-link;
+}
+.reply .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-bullhorn;
+}
+.edit .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-pencil;
+}

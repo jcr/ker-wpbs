@@ -1,11 +1,14 @@
 article.post {
-    @include box-shadow(5px 5px 7px 1px rgba($gray, .5));
-    padding: 1em;
-    background-color: rgba($white, .8);
-    &:not(:first-of-type) {
-        margin-top: $grid-gutter-width / 2;
+    header span.glyphicon {
+        float: right;
     }
-    h1 {
+    &.sticky {
+        @extend .bg-info;
+    }
+    &[class*=protected] {
+        @extend .bg-warning;
+    }
+    h1, h2, h3, h4, h5 {
         margin-top: 0;
     }
 }

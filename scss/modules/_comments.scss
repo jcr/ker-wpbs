@@ -1,0 +1,45 @@
+aside.comments {
+    border-top: 5px solid lighten($gray, 42%);
+    header {
+        border-bottom: 1px dotted lighten($gray, 42%);
+        h2 {
+            margin: 0;
+            padding: 0 $grid-gutter-width / 2 .5em;
+        }
+    }
+}
+
+.children,
+.comment-list {
+    @extend .list-unstyled;
+    &>li {
+        border-bottom: 1px solid lighten($gray, 69%);
+        &:last-of-type { border-bottom: 0; }
+    }
+}
+.children {
+    padding-left: $grid-gutter-width / 2;
+    li {
+        border-left: 5px solid lighten($gray, 69%);
+    }
+}
+
+.comment article {
+    padding: 1em 0;
+    &:hover {
+        background-color: rgba($white, .5);
+    }
+    footer {
+        @extend .text-right;
+        font-size: .8em;
+        color: lighten($gray, 42%);
+        border-top: 1px dotted lighten($gray, 69%);
+    }
+    .reply,
+    .edit {
+        padding-left: .5em;
+        .text {
+             @extend .sr-only;
+        }
+    }
+}

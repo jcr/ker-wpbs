@@ -1,0 +1,61 @@
+//
+// Placement and alignment for various WP base elements
+//
+
+
+main {
+    @extend .col-xs-12;
+    @extend .col-sm-8;
+    @extend .col-lg-offset-1;
+    @extend .col-lg-7;
+//    margin-left: $grid-gutter-width / 4;
+}
+
+aside#sidebar {
+    @extend .col-xs-12;
+    @extend .col-sm-4;
+    @extend .col-lg-3;
+}
+
+article.post,
+article.page {
+//    @extend .row;
+//    margin-top: $grid-gutter-width / 4;
+
+    /* &>header, */
+    /* &>section, */
+    /* &>footer, */
+    /* &>aside { */
+    /*     //@extend .clearfix; */
+    /*     //@extend .row; */
+    /*     //@extend .col-sm-12; */
+    /* } */
+    header,
+    footer {
+        @extend .clearfix;
+    }
+    header {
+        img {
+            @extend .pull-left;
+            margin: 0px 1em 0px ($grid-gutter-width / 2 * -1);
+            max-width: 50%;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+        }
+    }
+    footer {
+        p {
+            @extend .col-sm-6;
+            &:last-of-type {
+                @extend .text-right;
+                @extend .pull-right;
+            }
+        }
+    }
+
+    // COMMENTS
+    /* .comment article { */
+    /*     @extend .row; */
+    /* } */
+}

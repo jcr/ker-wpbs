@@ -1,0 +1,37 @@
+article {
+    // Apply to all images within an article (blog, page, comment...)
+    .wp-caption,
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 1em 0;
+        //&:not([class*="align"]),
+        &.alignleft   {
+            float: left;
+            margin-right: 2.5em;
+        }
+        &.alignright  {
+            float: right;
+            margin-left: 2.5em;
+        }
+        &.aligncenter {
+            margin: auto;
+        }
+    }
+    .wp-caption {
+        @extend .clearfix;
+        @extend .text-center;
+        background-color: rgba($white, .8);
+        width: auto !important;
+        img { margin: 0; float: none; }
+        p { margin: .5em 0; }
+    }
+}
+
+.gallery {
+    max-width: 100%;
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
