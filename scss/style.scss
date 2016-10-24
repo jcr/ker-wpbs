@@ -6,6 +6,7 @@
 
 // Site variables (configure colors, size, fonts, etc...)
 @import "partials/variables";
+@import "partials/typography";
 
 //## Vendor stuff (Compass, Boostrap, etc...)
 @import "compass";
@@ -20,12 +21,18 @@
 //@import "bootstrap-select";
 
 // Modules / elements used in the project
+@import "modules/common";
+@import "modules/menus";
+@import "modules/tags";
+@import "modules/images";
+@import "modules/forms";
+@import "modules/sidebars";
 @import "modules/header";
 @import "modules/footer";
-@import "modules/menus";
-@import "modules/sidebars";
+@import "modules/layout";
 @import "modules/posts";
 @import "modules/pages";
+@import "modules/comments";
 
 //
 html {
@@ -41,5 +48,16 @@ body {
                 padding-top: 46px;
             }
         }
+    }
+}
+
+.home {
+    article.post {
+        float: left;
+        width: 31.3%;
+        margin-left: 1%;
+        margin-right: 1%;
+//        padding: 0;
+//        margin
     }
 }

@@ -10,7 +10,7 @@
 function ker_wpbs_theme_support() {
     // Site logo
     add_theme_support('site-logo', array(
-        //'size' => 'post-thumbnails',
+        'size' => 'post-thumbnails',
     ));
 	// Custom background (credits: @bransonwerner)
 	add_theme_support(
@@ -28,27 +28,63 @@ function ker_wpbs_theme_support() {
 
     // Post related
     add_post_type_support('post', 'post-formats');
-	add_theme_support('post-formats', array('aside', 'link', 'quote'));
+	//add_theme_support('post-formats', array('aside', 'link', 'quote'));
 	add_theme_support('post-thumbnails');
 }
 
 add_action('footer_credits', 'ker_wpbs_credits');
 function ker_wpbs_credits() {
-    echo '\o/ '.date('Y');
+    echo get_theme_mod('footer_text');
 }
 
 add_action('customize_register', 'ker_wpbs_theme_customizer');
 function ker_wpbs_theme_customizer($wp_customize) {
-/*   // Uncomment the below lines to remove the default customize sections  */
-/*   // $wp_customize->remove_section('title_tagline'); */
-/*   // $wp_customize->remove_section('colors'); */
-/*   // $wp_customize->remove_section('background_image'); */
-/*   // $wp_customize->remove_section('static_front_page'); */
-/*   // $wp_customize->remove_section('nav'); */
-/*   // $wp_customize->remove_control('blogdescription'); */
-/*   // Uncomment the following to change the default section titles */
-/*   // $wp_customize->get_section('colors')->title = __( 'Theme Colors' ); */
-/*   // $wp_customize->get_section('background_image')->title = __( 'Images' ); */
+    $wp_customize->add_setting('header_footer_color' , array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+        $wp_customize,
+        'header_footer_color', array(
+            'label'      => __( 'Header & Footer bgcolor', 'ker-wpbs' ),
+            'section'    => 'colors',
+            'settings'   => 'header_footer_color',
+        )
+    ));
+
+    $wp_customize->add_setting('footer_text');
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'footer_text', array(
+            'label'      => __( 'Footer text', 'ker-wpbs' ),
+            'section'    => 'title_tagline',
+            'settings'   => 'footer_text',
+        )
+    ));
+
+    $wp_customize->add_section('ker_wpbs_fonts' , array(
+        'title'      => __('Fonts', 'ker-wpbs'),
+        'priority'   => 40,
+    ) );
+    $wp_customize->add_setting('font_header');
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'font_header', array(
+            'label'      => __( 'Header font', 'ker-wpbs' ),
+            'section'    => 'ker_wpbs_fonts',
+            'settings'   => 'font_header',
+        )
+    ));
+    /* Uncomment the below lines to remove the default customize sections */
+    /* $wp_customize->remove_section('title_tagline'); */
+    /* $wp_customize->remove_section('colors'); */
+    /* $wp_customize->remove_section('background_image'); */
+    /* $wp_customize->remove_section('static_front_page'); */
+    /* $wp_customize->remove_section('nav'); */
+    /* $wp_customize->remove_control('blogdescription'); */
+    /* Uncomment the following to change the default section titles */
+    /* $wp_customize->get_section('colors')->title = __( 'Theme Colors' ); */
+    /* $wp_customize->get_section('background_image')->title = __( 'Images' ); */
 }
 
 ?>

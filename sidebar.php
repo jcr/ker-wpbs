@@ -6,11 +6,21 @@
  *
  * Author: Jules Clement <jules@ker.bz>
  */
-if (has_nav_menu('social') || is_active_sidebar('sidebar')) : ?>
-<aside id="sidebar" class="col-sm-4 col-lg-3" role="complementary">
-<?php if (is_active_sidebar('sidebar')) : ?>
-    <?php dynamic_sidebar('sidebar'); ?>
-<?php endif; ?>
+
+$asidebar = array('sidebar', 'sidebar1');
+$showside = false;
+foreach ($asidebar as $bar) {
+    if (is_active_sidebar($bar)) $showside = true;
+}
+if (has_nav_menu('social') || $showside) : ?>
+<aside id="sidebar">
+<?php
+foreach ($asidebar as $bar) {
+    if (is_active_sidebar($bar)) {
+        dynamic_sidebar($bar);
+    }
+}
+?>
 <?php if (has_nav_menu('social')) : ?>
     <div id="social-navigation" class="social-navigation widget list-group" role="navigation">
 <?php

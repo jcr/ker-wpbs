@@ -9,26 +9,34 @@
 
 get_header();
 
-/* if (is_home()): /\* is homepage *\/ */
-/*     // DO STUFF */
-/* endif; /\* End of is homepage *\/ */
+if (is_home()): /* Type of page */
+    echo '<h1>ISHOME</h1>';
+elseif (is_search()):
+    echo '<h1>IS SEARCH</h1>';
+elseif (is_page()):
+    echo '<h1>IS PAGE</h1>';
+elseif (is_singular()):
+    echo '<h1>IS POST</h1>';
+elseif (is_category()):
+    echo '<h1>IS CAT</h1>';
+elseif (is_tag()):
+    echo '<h1>IS DOG</h1>';
+endif; /* End of page type */
 
 ?>
-      <main class="col-xs-12 col-sm-8 col-lg-offset-1 col-lg-6">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <header>
-            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-          </header>
-        <section>
-          <?php the_content(); ?>
-        </section>
-      </article>
-<?php endwhile;
-/*     XXX_pager(); */
-/* else: */
-/*     XXX_post_oops(); */
-endif; ?>
-    </main>
+      <main>
+<?php
+/* Have Post + The Loop */
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        get_template_part('templates/article');
+    } /* End of The Loop */
+    ker_wpbs_pager();
+} else {
+    get_template_part('templates/nothing');
+} /* End of Have Post + The Loop */
+?>
+      </main>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

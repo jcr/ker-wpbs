@@ -4,8 +4,8 @@ body>footer {
     color: $white;
     margin-top: ($grid-gutter-width / 2);
     &>p {
-        @extend .col-sm-6;
-        @extend .col-md-4;
+        @extend .col-sm-4;
+        //@extend .col-md-4;
         padding: 2em;
     }
     // Sticky footer

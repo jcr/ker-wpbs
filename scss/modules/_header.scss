@@ -2,7 +2,7 @@ body>header {
     @extend .row;
     //margin-bottom: ($grid-gutter-width / 2);
     background-color: $blue-dark;
-    border-bottom: 2px solid $gray;
+    border-bottom: 1em solid $gray;
     &, a, a:hover { color: $white; }
     h1 {
         @extend .col-sm-4;

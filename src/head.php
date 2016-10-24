@@ -8,8 +8,17 @@
  * Author: Jules Clement <jules@ker.bz>
  */
 
+function ker_wpbs_customize_css() {
+    $style = '
+body>header, body>header .navbar, body>header .navbar a, body>footer {
+  background-color: ' .  get_theme_mod('header_footer_color', '#000000') . '
+}';
+    echo '<style type="text/css">' . $style . '</style>';
+}
+
 function ker_wpbs_action_cleanup_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
+    remove_action('wp_head', 'wp_admin_bar_header');
 }
 
 function ker_wpbs_scripts_and_styles() {
@@ -22,6 +31,11 @@ function ker_wpbs_scripts_and_styles() {
 		wp_enqueue_style('stylesheet');
     }
 }
+function ker_wpbs_admin_scripts_and_styles() {
+    wp_register_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, '1.0.0');
+    wp_enqueue_style('admin_css');
+}
+add_action('admin_enqueue_scripts', 'ker_wpbs_admin_scripts_and_styles');
 
 function ker_wpbs_remove_emoji() {
     remove_action('wp_head',            'print_emoji_detection_script', 7);

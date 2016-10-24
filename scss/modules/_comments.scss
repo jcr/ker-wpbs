@@ -2,10 +2,10 @@ aside.comments {
     border-top: 5px solid lighten($gray, 42%);
     header {
         border-bottom: 1px dotted lighten($gray, 42%);
-        h2 {
-            margin: 0;
-            padding: 0 $grid-gutter-width / 2 .5em;
-        }
+        /* h2 { */
+        /*     margin: 0; */
+        /*     padding: 0 $grid-gutter-width / 2 .5em; */
+        /* } */
     }
 }
 
@@ -41,5 +41,15 @@ aside.comments {
         .text {
              @extend .sr-only;
         }
+    }
+}
+
+.comment-respond {
+    padding: ($grid-gutter-width / 4) 0;
+    h3 {
+        border-bottom: 1px dotted lighten($gray, 42%);
+    }
+    h3, form {
+        margin: 0 $grid-gutter-width / 4;
     }
 }

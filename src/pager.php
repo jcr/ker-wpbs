@@ -2,7 +2,7 @@
 /**
  * Ker WP BootStrap
  *
- * Site home page
+ * Site pager
  *
  * Author: Jules Clement <jules@ker.bz>
  */

@@ -14,4 +14,7 @@
 .tagcloud {
     text-align: justify;
     line-height: 1.2em;
+    a {
+        white-space: nowrap;
+    }
 }

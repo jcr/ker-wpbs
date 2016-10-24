@@ -1,0 +1,55 @@
+
+form {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="search"],
+    select,
+    textarea {
+        @extend .form-control;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+    .screen-reader-text {
+        @extend .sr-only;
+    }
+}
+
+
+/* Override WP Contact Form 7 styles */
+.wpcf7 form {
+    @extend .form-horizontal;
+    &>div, &>p {
+        //@extend .form-group;
+        @extend .row;
+        &>label { @extend .control-label; @extend .col-sm-4; }
+        &>span.wpcf7-form-control-wrap { @extend .col-sm-8; }
+        .wpcf7-radio label { @extend .radio-inline; }
+        div {
+            @extend .col-sm-8;
+            @extend .input-group;
+        }
+    }
+
+    /* Form submit button */
+    &>p:last-of-type {
+        @extend .pull-right;
+    }
+    /* Hack because WPCF7 wraps all input elements in span */
+    .input-group {
+        input[type="text"]:first-child,
+        input[type="email"]:first-child,
+        input[type="tel"]:first-child {
+            border-top-right-radius: $border-radius-base;
+            border-bottom-right-radius: $border-radius-base;
+        }
+    }
+    .wpcf7-submit {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}

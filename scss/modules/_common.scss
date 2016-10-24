@@ -17,7 +17,6 @@ article.post,
 article.page {
     @include box-shadow(5px 5px 7px 1px rgba($gray, .5));
     background-color: rgba($white, .8); /* shouldn't be there MOVE */
-
     margin-bottom: $grid-gutter-width / 4;
     &:last-of-type { margin-bottom: 0; }
     /* &>header, */
@@ -26,12 +25,45 @@ article.page {
     /* &>aside { */
     /*     //@extend .clearfix; */
     /* } */
+    header {
+        margin: 0 $grid-gutter-width / 4;
+        img {
+            @extend .pull-left;
+            margin: 0 ($grid-gutter-width / 4) ($grid-gutter-width / 4) ($grid-gutter-width / 4 * -1);
+            max-width: 150px;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+        }
+    }
+    h1, h2, h3, h4, h5 {
+        margin-top: 0;
+    }
+    .comment-list article,
+    section {
+        padding: 1em;
+    }
     footer {
         border-top: 1px dotted lighten($gray, 30%);
+        .link {
+            @extend .text-right;
+            @extend .pull-right;
+            @extend .col-xs-12;
+            @extend .col-sm-8;
+        }
+        p.link,
+        p {
+            padding-left: $grid-gutter-width / 4;
+            padding-right: $grid-gutter-width / 4;
+        }
     }
 }
 
-
+.more-link {
+    @extend .pull-right;
+    font-style: italic;
+    font-size: .9em;
+}
 
 .link .icon {
     @extend .glyphicon;

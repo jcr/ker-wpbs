@@ -48,16 +48,16 @@ $btn-primary-border:    darken($brand-primary, 6.5%);
 $input-group-addon-bg: $white;
 
 // Menus & dropdown
-$navbar-default-bg:     $blue-dark;
-$navbar-default-color:  $white;
-// $navbar-default-border: $orange;
-$dropdown-bg:           $navbar-default-bg;
-$dropdown-link-color:   $white;
-
+$navbar-default-bg:                     $blue-dark;
+$navbar-default-border:                 inherit;
+$navbar-default-color:                  $white;
 $navbar-default-link-color:             $white;
 $navbar-default-link-hover-color:       darken($white, 6.5%);
-$navbar-default-link-active-color:      $brand-secondary;
-$navbar-border-radius: 0;
+$navbar-default-link-active-color:      $white;
+$dropdown-bg:                           $navbar-default-bg;
+$dropdown-link-color:                   $white;
+/* $navbar-default-link-active-bg:         rgba($white, 5) !default; */
+/* $navbar-border-radius: 0; */
 // $navbar-height: 40px;
 
 //$jumbotron-bg:  lighten($blue, 85%);

@@ -1,14 +1,12 @@
 article.post {
     header span.glyphicon {
         float: right;
+        margin-top: .5em;
     }
     &.sticky {
         @extend .bg-info;
     }
     &[class*=protected] {
         @extend .bg-warning;
-    }
-    h1, h2, h3, h4, h5 {
-        margin-top: 0;
     }
 }
