@@ -45,11 +45,11 @@ function ker_wpbs_setup_theme() {
 	add_filter('wp_resource_hints', 'ker_wpbs_filter_resource_hints', 10, 2);
 
     // IMPROVEMENTS (so you think... ;)
-    add_filter('wp_title', 'ker_wpbs_title', 10, 3);
+    add_filter('wp_title',          'ker_wpbs_title', 10, 3);
     /* add_filter('the_generator', 'XXX_rss_version'); */
     /* add_filter('gallery_style', 'XXX_gallery_style'); */
-    add_filter('excerpt_more', 'ker_wpbs_excerpt_more');
-    add_filter('the_content',  'ker_wpbs_filter_the_content');
+    add_filter('excerpt_more',      'ker_wpbs_excerpt_more');
+    add_filter('the_content',       'ker_wpbs_filter_the_content');
 
     // THEME setup
     ker_wpbs_theme_support();
@@ -57,8 +57,8 @@ function ker_wpbs_setup_theme() {
 //    set_post_thumbnail_size(125, 125, true);
     // i18n
     load_theme_textdomain('ker-wpbs', get_template_directory() . '/translation');
-    add_action('wp_head', 'ker_wpbs_customize_css');
-    add_action('wp_enqueue_scripts', 'ker_wpbs_scripts_and_styles', 999);
+    add_action('wp_head',           'ker_wpbs_customize_css');
+    add_action('wp_enqueue_scripts','ker_wpbs_scripts_and_styles', 999);
 }
 
 function ker_wpbs_theme_layout() {
