@@ -1,0 +1,10 @@
+/* line 1, ../scss/admin.scss */
+body.wp-admin {
+  background-color: inherit;
+}
+/* line 3, ../scss/admin.scss */
+body.wp-admin #promoted-span {
+  margin-left: 18px;
+}
+
+/*# sourceMappingURL=admin.css.map */

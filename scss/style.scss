@@ -41,7 +41,9 @@ html {
 }
 body {
     @media screen {
+        // Bottom footer
         margin-bottom: $footer-height + ($grid-gutter-width / 2);
+        // WP Admin bar
         &.admin-bar>header {
             padding-top: 32px;
             @media (max-width: $screen-sm) {
@@ -52,12 +54,10 @@ body {
 }
 
 .home {
-    article.post {
-        float: left;
-        width: 31.3%;
-        margin-left: 1%;
-        margin-right: 1%;
-//        padding: 0;
-//        margin
-    }
+    /* article.post { */
+    /*     float: left; */
+    /*     width: 28.33%; */
+    /*     margin-left: 5%; */
+    /*     //margin-right: 1%; */
+    /* } */
 }
