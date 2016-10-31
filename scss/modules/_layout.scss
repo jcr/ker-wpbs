@@ -2,6 +2,7 @@
 // Placement and alignment for various WP base elements
 //
 
+#content,
 main {
     @extend .col-xs-12;
     @extend .col-sm-8;

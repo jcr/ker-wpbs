@@ -4,28 +4,21 @@ body>header {
     background-color: $blue-dark;
     border-bottom: 1em solid $gray;
     &, a, a:hover { color: $white; }
-    h1 {
+    .site {
         @extend .col-sm-4;
         @extend .col-md-3;
         font-family: ConcertOne, cursive;
     }
-    p {
-        font-family: ConcertOne, cursive;
-        @extend .col-sm-8;
-        @extend .col-md-3;
-        @media (min-width: $screen-sm) {
-            padding-top: 2.7em;
-        }
-    }
     .menu {
-        @extend .col-sm-6;
-        //@extend .col-md-4;
+        @extend .col-sm-8;
+        @extend .col-md-9;
     }
 }
 
 header {
     h1, h2, h3 {
         font-family: ConcertOne, cursive;
+        margin-top: 0;
     }
     a:hover {
         text-decoration: none;

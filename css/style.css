@@ -2486,10 +2486,13 @@ pre code {
 }
 
 /* line 11, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, body > header h1, body > header p, .col-lg-3, aside#sidebar, .col-xs-4, article.post footer p,
-article.page footer p, .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header h1, body > footer > p, aside#sidebar, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, body > header .menu, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, main, .col-xs-8, .col-sm-8, article.post footer .link,
-article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header p, main, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, article.post footer .link,
-article.page footer .link, ul.page-numbers, main, aside#sidebar, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, body > header .site, .col-lg-3, aside#sidebar, .col-xs-4, article.post footer p,
+article.page footer p, .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header .site, body > footer > p, aside#sidebar, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, #content,
+main, .col-xs-8, .col-sm-8, article.post footer .link,
+article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header .menu, #content,
+main, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, body > header .menu, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, article.post footer .link,
+article.page footer .link, ul.page-numbers, #content,
+main, aside#sidebar, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 30px;
@@ -2499,7 +2502,8 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar, .col-sm-12, .co
 /* line 27, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, article.post footer p,
 article.page footer p, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, article.post footer .link,
-article.page footer .link, ul.page-numbers, main, aside#sidebar {
+article.page footer .link, ul.page-numbers, #content,
+main, aside#sidebar {
   float: left;
 }
 
@@ -2561,7 +2565,8 @@ article.page footer p {
 
 /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
 .col-xs-12, article.post footer .link,
-article.page footer .link, ul.page-numbers, main, aside#sidebar {
+article.page footer .link, ul.page-numbers, #content,
+main, aside#sidebar {
   width: 100%;
 }
 
@@ -2762,8 +2767,9 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
 
 @media (min-width: 782px) {
   /* line 27, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header h1, body > footer > p, aside#sidebar, .col-sm-5, .col-sm-6, body > header .menu, .col-sm-7, .col-sm-8, article.post footer .link,
-  article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header p, main, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header .site, body > footer > p, aside#sidebar, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, article.post footer .link,
+  article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header .menu, #content,
+  main, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
@@ -2783,7 +2789,7 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header h1, body > footer > p, aside#sidebar {
+  .col-sm-4, .wpcf7 form > div > label, .wpcf7 form > p > label, body > header .site, body > footer > p, aside#sidebar {
     width: 33.33333333%;
   }
 
@@ -2793,7 +2799,7 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-6, body > header .menu {
+  .col-sm-6 {
     width: 50%;
   }
 
@@ -2804,7 +2810,8 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
   .col-sm-8, article.post footer .link,
-  article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header p, main {
+  article.page footer .link, .wpcf7 form > div > span.wpcf7-form-control-wrap, .wpcf7 form > p > span.wpcf7-form-control-wrap, .wpcf7 form > div div, .wpcf7 form > p div, body > header .menu, #content,
+  main {
     width: 66.66666667%;
   }
 
@@ -3025,7 +3032,7 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
 }
 @media (min-width: 992px) {
   /* line 27, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1, .col-md-2, .col-md-3, body > header h1, body > header p, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, body > header .site, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, body > header .menu, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -3040,7 +3047,7 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-3, body > header h1, body > header p {
+  .col-md-3, body > header .site {
     width: 25%;
   }
 
@@ -3070,7 +3077,7 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-9 {
+  .col-md-9, body > header .menu {
     width: 75%;
   }
 
@@ -3286,7 +3293,8 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
 }
 @media (min-width: 1200px) {
   /* line 27, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-1, .col-lg-2, .col-lg-3, aside#sidebar, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, main, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, aside#sidebar, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, #content,
+  main, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
 
@@ -3321,7 +3329,8 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 35, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-7, main {
+  .col-lg-7, #content,
+  main {
     width: 58.33333333%;
   }
 
@@ -3486,7 +3495,8 @@ article.page footer .link, ul.page-numbers, main, aside#sidebar {
   }
 
   /* line 60, ../../../../../../var/lib/gems/2.1.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-offset-1, main {
+  .col-lg-offset-1, #content,
+  main {
     margin-left: 8.33333333%;
   }
 
@@ -10309,25 +10319,16 @@ body > header, body > header a, body > header a:hover {
   color: #FFFFFF;
 }
 /* line 7, ../scss/modules/_header.scss */
-body > header h1 {
+body > header .site {
   font-family: ConcertOne, cursive;
-}
-/* line 12, ../scss/modules/_header.scss */
-body > header p {
-  font-family: ConcertOne, cursive;
-}
-@media (min-width: 782px) {
-  /* line 12, ../scss/modules/_header.scss */
-  body > header p {
-    padding-top: 2.7em;
-  }
 }
 
-/* line 27, ../scss/modules/_header.scss */
+/* line 19, ../scss/modules/_header.scss */
 header h1, header h2, header h3 {
   font-family: ConcertOne, cursive;
+  margin-top: 0;
 }
-/* line 30, ../scss/modules/_header.scss */
+/* line 23, ../scss/modules/_header.scss */
 header a:hover {
   text-decoration: none;
 }
@@ -10358,7 +10359,7 @@ footer {
   color: #7f7c6e;
 }
 
-/* line 19, ../scss/modules/_layout.scss */
+/* line 20, ../scss/modules/_layout.scss */
 article.post,
 article.page {
   /* &>header, */
@@ -10373,7 +10374,7 @@ article.page {
   /*     @extend .row; */
   /* } */
 }
-/* line 26, ../scss/modules/_layout.scss */
+/* line 27, ../scss/modules/_layout.scss */
 article.post footer p,
 article.page footer p {
   margin: 0;

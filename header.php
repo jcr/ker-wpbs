@@ -20,6 +20,8 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="@@@TODO: excerpt?@@@">
+    <meta name="keywords" content="@@@TODO: TAGS?@@@">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 <!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
@@ -37,9 +39,10 @@
   if ( $description || is_customize_preview() ) : ?>
         <p><?php echo $description; ?></p>
 <?php endif; ?>
+      </div>
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
       <div class="menu">
-      <nav class="navbar navbar-default" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <nav class="navbar navbar-default" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -64,9 +67,8 @@
     'walker' => new ker_wpbs_walker_nav_menu
 )); ?>
         </nav>
-          </div>
-<?php endif; ?>
       </div>
+<?php endif; ?>
     </header>
     <section class="container-fluid">
     <div class="row">

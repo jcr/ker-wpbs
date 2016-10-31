@@ -63,7 +63,7 @@ function ker_wpbs_setup_theme() {
 
 function ker_wpbs_theme_layout() {
     register_nav_menus(array(
-        'primary'   => __('Main Menu',    'ker-wpbs'),
+        'primary'   => __('Header Menu',    'ker-wpbs'),
         //'social'    => __('Social Links', 'ker-wpbs'),
         'footer'    => __('Footer Menu',  'ker-wpbs')
     ));
