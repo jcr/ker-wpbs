@@ -7,7 +7,7 @@ body>header {
     .site {
         @extend .col-sm-4;
         @extend .col-md-3;
-        font-family: ConcertOne, cursive;
+        font-family: ConcertOne, cursive; // WPBS Settings
     }
     .menu {
         @extend .col-sm-8;

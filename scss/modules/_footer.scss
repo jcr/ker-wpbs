@@ -1,10 +1,15 @@
 body>footer {
+    &>.row {
+        background-color: inherit;
+    }
     //@extend .row;
     background-color: $blue-dark;
+    border-top: 1em solid $gray;
     color: $white;
     margin-top: ($grid-gutter-width / 2);
-    &>p {
-        @extend .col-sm-4;
+    padding-bottom: 2em;
+    .row>p {
+        @extend .col-sm-3;
         //@extend .col-md-4;
         padding: 2em;
     }
@@ -15,6 +20,31 @@ body>footer {
         bottom: 0;
         width:  100%;
         height: ($footer-height);
+    }
+    // Sidebar
+    aside {
+        @extend .col-sm-9;
+
+        .list-group {
+            @extend .row;
+        }
+
+        .widget {
+            @extend .pull-right;
+            //@extend .col-sm-4;
+        }
+        .widget_pages {
+            &>ul>li {
+                @extend .col-xs-4;
+                @extend .col-sm-2;
+            }
+            ul {
+                @extend .list-unstyled;
+                &.children {
+                    padding-left: .5em;
+                }
+            }
+        }
     }
 }
 
