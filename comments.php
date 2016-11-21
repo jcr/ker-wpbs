@@ -13,8 +13,8 @@ if ( post_password_required() ) {
 }
 ?>
         <aside class="comments">
-          <header>
 <?php if ( have_comments() ) : ?>
+          <header>
             <h2><?php
     $comments_number = get_comments_number();
     echo number_format_i18n( $comments_number );

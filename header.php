@@ -70,5 +70,6 @@
       </div>
 <?php endif; ?>
     </header>
+<?php get_sidebar('highlight'); ?>
     <section class="container-fluid">
     <div class="row">

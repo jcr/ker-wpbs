@@ -6,28 +6,12 @@
  *
  * Author: Jules Clement <jules@ker.bz>
  */
-
 get_header();
-
-/* if (is_home()): /\* Type of page *\/ */
-/*     echo '<h1>ISHOME</h1>'; */
-/* elseif (is_search()): */
-/*     echo '<h1>IS SEARCH</h1>'; */
-/* elseif (is_page()): */
-/*     echo '<h1>IS PAGE</h1>'; */
-/* elseif (is_singular()): */
-/*     echo '<h1>IS POST</h1>'; */
-/* elseif (is_category()): */
-/*     echo '<h1>IS CAT</h1>'; */
-/* elseif (is_tag()): */
-/*     echo '<h1>IS DOG</h1>'; */
-/* endif; /\* End of page type *\/ */
-
 ?>
       <main>
 <?php
 // Is this the home page?
-if (is_home()):
+if (is_front_page()):
   echo '<h1>ISHOME</h1>';
   get_sidebar('homepage');
 endif;

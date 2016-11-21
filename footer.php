@@ -10,6 +10,8 @@
     </div>
     </section>
     <footer class="container-fluid" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="row">
+<?php get_sidebar('footer'); ?>
 
 <?php if ( has_nav_menu( 'footer' ) ) : ?>
       <nav class="navbar navbar-default">
@@ -40,6 +42,7 @@
 <?php else: ?>
       <p><?php do_action('footer_credits'); ?></p>
 <?php endif; ?>
+    </div>
     </footer>
 <?php wp_footer(); ?>
   </body>

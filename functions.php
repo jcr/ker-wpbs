@@ -64,22 +64,39 @@ function ker_wpbs_setup_theme() {
 function ker_wpbs_theme_layout() {
     register_nav_menus(array(
         'primary'   => __('Header Menu',    'ker-wpbs'),
-        //'social'    => __('Social Links', 'ker-wpbs'),
         'footer'    => __('Footer Menu',  'ker-wpbs')
     ));
 	register_sidebar(array(
-		'id'            => 'sidebar',
-		'name'          => __( 'Main Sidebar', 'ker-wpbs' ),
-		'description'   => __( 'The first (primary) sidebar.', 'ker-wpbs' ),
+		'id'            => 'homepage',
+		'name'          => __( 'Homepage section', 'ker-wpbs' ),
+		'description'   => __( 'A block that shows only on the frontpage.', 'ker-wpbs' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s list-group">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="list-group-item-heading">',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'id'            => 'sidebar1',
+		'id'            => 'highlight',
+		'name'          => __( 'Highlight section', 'ker-wpbs' ),
+		'description'   => __( 'Just after the header, before main content.', 'ker-wpbs' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s list-group">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="list-group-item-heading">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar(array(
+		'id'            => 'sidebar-1',
 		'name'          => __( 'WP Sidebar', 'ker-wpbs' ),
 		'description'   => __( 'WP default sidebar.', 'ker-wpbs' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s list-group">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="list-group-item-heading">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar(array(
+		'id'            => 'footer',
+		'name'          => __( 'Footer section', 'ker-wpbs' ),
+		'description'   => __( 'Bottom of the page.', 'ker-wpbs' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s list-group">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="list-group-item-heading">',
