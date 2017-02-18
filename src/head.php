@@ -8,12 +8,21 @@
  * Author: Jules Clement <jules@ker.bz>
  */
 
+// Customizer CSS overrides
 function ker_wpbs_customize_css() {
-    $style = '
-body>header, body>header .navbar, body>header .navbar a, body>footer {
-  background-color: ' .  get_theme_mod('header_footer_color', '#000000') . '
-}';
-    echo '<style type="text/css">' . $style . '</style>';
+    $color = get_theme_mod('header_footer_color');
+    if (!$color) return;
+
+/*     $style = ' */
+/* body>header, .navbar, .navbar a, body>footer { */
+/*   background-color: ' .  get_theme_mod('header_footer_color') . ' */
+/* } */
+/* '; */
+    /* echo '<style type="text/css">' . $style . '</style>'; */
+
+    echo '<style type="text/css">';
+    include_once('custom.css.php');
+    echo '</style>';
 }
 
 function ker_wpbs_action_cleanup_header() {
@@ -23,6 +32,7 @@ function ker_wpbs_action_cleanup_header() {
 
 function ker_wpbs_scripts_and_styles() {
     global $wp_styles;
+
     wp_register_style('stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all');
     wp_register_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', false );
     wp_register_script('bootstrap-dropdown', get_stylesheet_directory_uri() . '/js/bootstrap-dropdown.js', array('bootstrap'));
