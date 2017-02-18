@@ -7,13 +7,6 @@
  * Author: Jules Clement <jules@ker.bz>
  */
 
-/* $asidebar = array('footer'); */
-/* $showside = false; */
-/* foreach ($asidebar as $bar) { */
-/*     if (is_active_sidebar($bar)) $showside = true; */
-/* } */
-/* if (has_nav_menu('social') || $showside) : */
-
 $bar = 'footer';
 if (is_active_sidebar($bar)):
 ?>

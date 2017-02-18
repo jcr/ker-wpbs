@@ -30,19 +30,11 @@
   </head>
   <body <?php body_class(); ?>>
     <header class="container-fluid">
-      <div class="site">
-<?php if ( get_theme_mod( 'ker_wpbs_logo' ) ) : ?>
-        <a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo esc_url( get_theme_mod('ker_wpbs_logo')); ?>" alt="Logo <?php bloginfo('name'); ?>" itemprop="logo"/></a>
-<?php endif; ?>
-        <h1><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
-<?php $description = get_bloginfo( 'description', 'display' );
-  if ( $description || is_customize_preview() ) : ?>
-        <p><?php echo $description; ?></p>
-<?php endif; ?>
-      </div>
+      <div class="row">
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
       <div class="menu">
         <nav class="navbar navbar-default" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -50,14 +42,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+<?php get_template_part('templates/header'); ?>
         </div>
 <?php wp_nav_menu(array(
     'container' => 'div',
     'container_id' => 'navbar-header',
     'container_class' => 'collapse navbar-collapse',
-    'menu' => __( 'Main Menu', 'ker_wpbs' ),  // nav name
-    'menu_class' => 'nav navbar-nav navbar-right',               // adding custom nav class
-    'theme_location' => 'primary',                 // where it's located in the theme
+    'menu' => __( 'Main Menu', 'ker_wpbs' ),        // nav name
+    'menu_class' => 'nav navbar-nav navbar-right',  // adding custom nav class
+    'theme_location' => 'primary',                  // where it's located in the theme
     'before' => '',                                 // before the menu
     'after' => '',                                  // after the menu
     'link_before' => '',                            // before each link
@@ -66,9 +59,15 @@
     'fallback_cb' => '',                             // fallback function (if there is one)
     'walker' => new ker_wpbs_walker_nav_menu
 )); ?>
+      </div>
         </nav>
       </div>
-<?php endif; ?>
+<?php
+else: /* no primary menu */
+  get_template_part('templates/header');
+endif;
+?>
+      </div>
     </header>
 <?php get_sidebar('highlight'); ?>
     <section class="container-fluid">

@@ -7,16 +7,12 @@
  * Author: Jules Clement <jules@ker.bz>
  */
 get_header();
+if (is_front_page()) echo '<h1>ISHOME '.basename(__FILE__).'</h1>';
+get_sidebar();
 ?>
       <main>
 <?php
-// Is this the home page?
-if (is_front_page()):
-  echo '<h1>ISHOME</h1>';
-  get_sidebar('homepage');
-endif;
-?>
-<?php
+get_sidebar('homepage');
 /* Have Post + The Loop */
 if (have_posts()) {
     while (have_posts()) {
@@ -29,5 +25,4 @@ if (have_posts()) {
 } /* End of Have Post + The Loop */
 ?>
       </main>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

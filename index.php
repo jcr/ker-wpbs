@@ -8,31 +8,15 @@
  */
 
 get_header();
-
-/* if (is_home()): /\* Type of page *\/ */
-/*     echo '<h1>ISHOME</h1>'; */
-/* elseif (is_search()): */
-/*     echo '<h1>IS SEARCH</h1>'; */
-/* elseif (is_page()): */
-/*     echo '<h1>IS PAGE</h1>'; */
-/* elseif (is_singular()): */
-/*     echo '<h1>IS POST</h1>'; */
-/* elseif (is_category()): */
-/*     echo '<h1>IS CAT</h1>'; */
-/* elseif (is_tag()): */
-/*     echo '<h1>IS DOG</h1>'; */
-/* endif; /\* End of page type *\/ */
-
+// Is this the home page?
+if (is_home()):
+  echo '<div class="debug bg-alert">ISHOME <small>'.basename(__FILE__).'</small></div>';
+endif;
+get_sidebar();
 ?>
       <main>
 <?php
-// Is this the home page?
-if (is_home()):
-  echo '<h1>ISHOME</h1>';
-  get_sidebar('homepage');
-endif;
-?>
-<?php
+get_sidebar('homepage');
 /* Have Post + The Loop */
 if (have_posts()) {
     while (have_posts()) {
@@ -45,5 +29,4 @@ if (have_posts()) {
 } /* End of Have Post + The Loop */
 ?>
       </main>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
