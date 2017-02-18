@@ -2,6 +2,8 @@
  * Ageris SCSS Variables
  */
 
+$footer-height: 180px; // WPBS Settings
+
 $black:         #333333;
 $white:         #FFFFFF;
 
@@ -20,8 +22,6 @@ $gray-lighter:  lighten($gray, 66%);
 $orange-darker: darken($orange, 13%);
 $orange-light:  lighten($orange, 6.5%);
 $orange-light:  lighten($orange, 25%);
-
-$footer-height: 180px; // WPBS Settings
 
 
 /**
@@ -48,7 +48,7 @@ $btn-primary-border:    darken($brand-primary, 6.5%);
 $input-group-addon-bg: $white;
 
 // Menus & dropdown
-$navbar-default-bg:                     $blue-dark;
+$navbar-default-bg:                     $brand-primary; //$blue-dark;
 $navbar-default-border:                 inherit;
 $navbar-default-color:                  $white;
 $navbar-default-link-color:             $white;

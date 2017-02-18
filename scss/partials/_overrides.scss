@@ -1,0 +1,21 @@
+// Just some basic WP elements to be styled with BS stuff...
+.more-link {
+    @extend .pull-right;
+    font-style: italic;
+    font-size: .9em;
+}
+.link .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-link;
+}
+.reply .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-bullhorn;
+}
+.edit .icon {
+    @extend .glyphicon;
+    @extend .glyphicon-pencil;
+}
+table {
+    @extend .table;
+}

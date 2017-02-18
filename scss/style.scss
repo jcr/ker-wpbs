@@ -9,16 +9,14 @@
 @import "partials/typography";
 
 //## Vendor stuff (Compass, Boostrap, etc...)
-@import "compass";
-//@import "compass/css3/border-radius";
-//@import "compass/css3/transform";
+//@import "compass";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "bootstrap-compass";
 @import "bootstrap";
-//@import "bootstrap/carousel";
-//@import "bootstrap/glyphicons";
-//@import "bootstrap/navbar";
-//@import "bootstrap-select";
+
+@import "partials/overrides";
 
 // Modules / elements used in the project
 @import "modules/common";
@@ -34,6 +32,7 @@
 @import "modules/pages";
 @import "modules/comments";
 
+@import "modules/pages";
 //
 html {
     position: relative;
@@ -53,11 +52,29 @@ body {
     }
 }
 
-.home {
-    /* article.post { */
-    /*     float: left; */
-    /*     width: 28.33%; */
-    /*     margin-left: 5%; */
-    /*     //margin-right: 1%; */
-    /* } */
+///////////////////////////////////////////
+//
+// DEBUG / Developpement
+//
+div {
+    position: relative;
+    .debug {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin: 0;
+        white-space: nowrap;
+        color: $gray;
+        //font-size: 1.4em;
+        @include transform(rotate(-90deg));
+        @include transform-origin(right top);
+        z-index: 10;
+    }
+}
+.widget-area,
+.debug {
+    background-color: rgba(#f0f8ff, 0.5);
+}
+.widget-area {
+    border: 3px solid #f0f8ff;
 }

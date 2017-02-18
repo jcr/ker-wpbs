@@ -9,8 +9,8 @@ body>footer {
     margin-top: ($grid-gutter-width / 2);
     padding-bottom: 2em;
     .row>p {
-        @extend .col-sm-3;
-        //@extend .col-md-4;
+        @extend .col-sm-4;
+        @extend .col-xs-12;
         padding: 2em;
     }
     // Sticky footer
@@ -23,29 +23,19 @@ body>footer {
     }
     // Sidebar
     aside {
-        @extend .col-sm-9;
-
-        .list-group {
-            @extend .row;
-        }
-
+        /* @extend .col-sm-9; */
+        /* .list-group { */
+        /*     @extend .row; */
+        /* } */
         .widget {
             @extend .pull-right;
-            //@extend .col-sm-4;
-        }
-        .widget_pages {
-            &>ul>li {
-                @extend .col-xs-4;
-                @extend .col-sm-2;
-            }
-            ul {
-                @extend .list-unstyled;
-                &.children {
-                    padding-left: .5em;
-                }
-            }
+            @extend .col-sm-6;
         }
     }
+    // Menu
+    /* nav { */
+    /*     @extend .col-xs-12; */
+    /* } */
 }
 
 footer {

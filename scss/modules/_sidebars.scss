@@ -1,11 +1,44 @@
-main aside>div.list-group {
+// Applies to WP Widget areas (sidebars)
+//  - Main WP sidebar (sidebar: sidebar-1)
+//  - Homepage area (sidebar: homepage)
+.widget-area .widget.list-group {
+    padding: 1em .5em;
     @include box-shadow(5px 5px 7px 1px rgba($gray, .5));
-    padding: 1em;
-    background-color: rgba($white, .8);
-    &:last-of-type {
+}
+
+// Highlight (sidebar: highlight)
+#highlight {
+    .list-group {
+        @extend .row;
+        padding: 0;
         margin-bottom: 0;
+        border: 3px solid black;
+        border-left: 0;
+        border-right: 0;
+        ul {
+            @extend .list-unstyled;
+            margin: 0;
+            @media (min-width: $screen-sm) {
+                height: 5em; // WPBS SETTING
+            }
+            li {
+                @extend .col-xs-12;
+                @extend .col-sm-4;
+                @media (min-width: $screen-sm) {
+                    border-left: 1px solid $gray;
+                    height: 100%;
+                }
+                @media (max-width: $screen-sm) {
+                    border-top: 1px solid $gray;
+                }
+                overflow: hidden;
+                &:first-of-type { border: 0; };
+            }
+        }
     }
-    &>ul {
-        @extend .list-unstyled;
-    }
+}
+
+//footer .sidebar,
+#highlight {
+    .list-group-item-heading { display: none; }
 }

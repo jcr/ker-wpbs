@@ -3,44 +3,17 @@
 //
 
 #content,
-main {
-    @extend .col-xs-12;
+body:not(.no-sidebar) main {
     @extend .col-sm-8;
     @extend .col-lg-offset-1;
     @extend .col-lg-7;
 }
-
-#highlight {
-    .list-group {
-        @extend .row;
-        margin-bottom: 0;
-        border-bottom: 1em solid black;
-        .list-group-item-heading { display: none; }
-        ul {
-            @extend .list-unstyled;
-            margin: 0;
-            @media (min-width: $screen-sm) {
-                height: 5em; // WPBS SETTING
-            }
-            li {
-                @extend .col-xs-12;
-                @extend .col-sm-4;
-                @media (min-width: $screen-sm) {
-                    border-left: 1px solid $gray;
-                    height: 100%;
-                }
-                @media (max-width: $screen-sm) {
-                    border-top: 1px solid $gray;
-                }
-                overflow: hidden;
-                &:first-of-type { border: 0; };
-            }
-        }
-    }
+body.no-sidebar main {
+    @extend .col-sm-10;
+    @extend .col-sm-offset-1;
 }
 
 aside#sidebar {
-    @extend .col-xs-12;
     @extend .col-sm-4;
     @extend .col-lg-3;
 }
@@ -53,19 +26,13 @@ article.page {
         @extend .clearfix;
     }
     footer p {
-        @extend .col-xs-4;
+        // FIX: this is likely fucked up
+        @extend .col-sm-4;
         margin: 0;
     }
-    /* &>header, */
-    /* &>section, */
-    /* &>footer, */
-    /* &>aside { */
-    /*     //@extend .clearfix; */
-    /*     //@extend .row; */
-    /*     //@extend .col-sm-12; */
-    /* } */
-    // COMMENTS
-    /* .comment article { */
-    /*     @extend .row; */
-    /* } */
 }
+
+/* body>header, */
+/* body>footer { */
+/*     position: relative; */
+/* } */

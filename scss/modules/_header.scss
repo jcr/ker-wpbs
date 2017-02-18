@@ -1,19 +1,45 @@
-body>header {
-    @extend .row;
-    //margin-bottom: ($grid-gutter-width / 2);
-    background-color: $blue-dark;
-    border-bottom: 1em solid $gray;
-    &, a, a:hover { color: $white; }
-    .site {
-        @extend .col-sm-4;
-        @extend .col-md-3;
-        font-family: ConcertOne, cursive; // WPBS Settings
-    }
-    .menu {
-        @extend .col-sm-8;
-        @extend .col-md-9;
-    }
-}
+/* body>header { */
+/*     @extend .row; */
+/*     //margin-bottom: ($grid-gutter-width / 2); */
+/*     background-color: $blue-dark; */
+/*     border-bottom: 1em solid $gray; */
+/*     &, a, a:hover { color: $white; } */
+/*     .site { */
+/*         @extend .col-sm-4; */
+/*         @extend .col-md-3; */
+/*         z-index: 10; */
+/*         font-family: ConcertOne, cursive; // WPBS Settings */
+/*         @media (max-width: $screen-sm) { */
+/*             margin-right: 100px */
+/*         } */
+/*     } */
+/*     .menu { */
+/*         .navbar { */
+/*             margin: 0; */
+/*         } */
+/*         .navbar-collapse { */
+/*             @extend .col-sm-8; */
+/*             @extend .col-md-9; */
+/*         } */
+/*         .navbar-right { */
+/*             margin-right: 0; */
+/*         } */
+/*         @media (max-width: $screen-sm) { */
+/*             margin-top: -4em; */
+/*             padding: 0; */
+/*             .navbar-header { */
+/*                 position: absolute; */
+/*                 top: 0;//75px; */
+/*                 right: 0; */
+/*                 width: 100%; */
+/*                 z-index: 9; */
+/*             } */
+/*             .navbar-collapse { */
+/*                 margin-top: 4em; */
+/*             } */
+/*         } */
+/*     } */
+/* } */
 
 header {
     h1, h2, h3 {

@@ -1,0 +1,25 @@
+.widget_pages {
+    h2.list-group-item-heading { display: none; }
+    &>ul>li {
+        @extend .col-xs-4;
+        @extend .col-sm-3;
+        @extend .col-md-2;
+        &>a {
+            padding: 20px 0;
+            text-align: center;
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+    }
+    ul {
+        @extend .list-unstyled;
+        &.children li {
+            padding-left: .5em;
+        }
+    }
+}

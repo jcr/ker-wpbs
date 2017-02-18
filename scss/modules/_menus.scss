@@ -1,13 +1,24 @@
 .navbar {
     border: 0;
 }
-
+.navbar-brand {
+    height: initial;
+    > img {
+        display: inline-block;
+    }
+    > span {
+        font-size: 2.5m;
+    }
+}
 header.navbar {
     margin-top: 0px;
 }
 
 footer .navbar {
     margin-bottom: 0px;
+    .navbar-nav {
+        margin-bottom: 1em;
+    }
 }
 
 /* Pager */    
